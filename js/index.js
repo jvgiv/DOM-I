@@ -46,12 +46,30 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navBar = document.querySelectorAll('a');
 
+navBar.forEach( function(currentValue) {
+  currentValue.style.color = 'green';
+});
+
+const newATag = document.createElement('a');
+newATag.textContent = 'Bye!';
+const nav = document.querySelector('nav');
+newATag.style.color = 'green';
+nav.appendChild(newATag);
+
+const newATagTwo = document.createElement('a');
+newATagTwo.textContent = 'Hello!';
+const navTwo = document.querySelector('nav');
+newATagTwo.style.color = 'green';
+nav.prepend(newATagTwo);
+
 navBar[0].textContent = siteContent.nav['nav-item-1'];
 navBar[1].textContent = siteContent.nav['nav-item-2'];
 navBar[2].textContent = siteContent.nav['nav-item-3'];
 navBar[3].textContent = siteContent.nav['nav-item-4'];
 navBar[4].textContent = siteContent.nav['nav-item-5'];
 navBar[5].textContent = siteContent.nav['nav-item-6'];
+
+
 
 // Top of Page
 const mainImg = document.querySelector('#cta-img');
